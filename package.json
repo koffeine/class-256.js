@@ -1,0 +1,43 @@
+{
+  "name": "class-256.js",
+  "version": "1.0.0",
+  "description": "JavaScript classical inheritance pattern library",
+  "keywords": [
+    "class",
+    "prototype",
+    "object",
+    "inheritance",
+    "oop",
+    "super",
+    "constructor"
+  ],
+  "license": "MIT",
+  "main": "dist/class.umd.min.js",
+  "homepage": "https://github.com/koffeine/class-256.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koffeine/class-256.js.git"
+  },
+  "author": "Horváth Kornél <koffeine@koffeine.com> (https://koffeine.com/)",
+  "bugs": {
+    "url": "https://github.com/koffeine/class-256.js/issues"
+  },
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.2",
+    "gulp-umd": "^0.2.0"
+  },
+  "files": [
+    "dist",
+    "src",
+    ".eslintrc",
+    "bower.json",
+    "gulpfile.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ]
+}

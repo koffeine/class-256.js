@@ -1,0 +1,34 @@
+{
+  "name": "class-256.js",
+  "version": "1.0.0",
+  "description": "JavaScript classical inheritance pattern library",
+  "keywords": [
+    "class",
+    "prototype",
+    "object",
+    "inheritance",
+    "oop",
+    "super",
+    "constructor"
+  ],
+  "license": "MIT",
+  "main": "dist/class.umd.min.js",
+  "homepage": "https://github.com/koffeine/class-256.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koffeine/class-256.js.git"
+  },
+  "authors": [
+    "Horváth Kornél <koffeine@koffeine.com> (https://koffeine.com/)"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    ".git",
+    ".gitignore",
+    "node_modules"
+  ]
+}
