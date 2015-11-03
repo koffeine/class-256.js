@@ -9,7 +9,7 @@ Originally based on [augment](https://github.com/javascript/augment) and [extend
 var HelloWorld = Class.extend(function() {
 	this.hello = 'Hello '; // public property
 
-	var world = 'World!'; // private property
+	var world = 'World!'; // private/privileged property
 
 	this.constructor = function() { // constructor method
 		privileged.call(this);
@@ -19,7 +19,7 @@ var HelloWorld = Class.extend(function() {
 		console.log(msg);
 	};
 
-	function privileged() { // private method
+	function privileged() { // private/privileged method
 		this.say(this.hello + world);
 	}
 });
@@ -31,6 +31,9 @@ var HelloWorld2 = HelloWorld.extend(function(parent) {
 		parent.constructor.apply(this, arguments); // call parent contructor
 	};
 });
+
+var h = new HelloWorld(); // 'Hello World!'
+var h2 = new HelloWorld2(); // 'Hi World!'
 ```
 
 ### Installation
@@ -55,10 +58,12 @@ Browser
 
 ### Files
 
-* dist/class.js: no UMD, unminified
-* dist/class.min.js: no UMD, minified
-* dist/class.umd.js: UMD, unminified
-* dist/class.umd.min.js: UMD, minified
+| UMD | Minified | File                  |
+|:----|:---------|:----------------------|
+|     |          | [dist/class.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.js)         |
+|     | ✓        | [dist/class.min.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.min.js)     |
+| ✓   |          | [dist/class.umd.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.umd.js)     |
+| ✓   | ✓        | [dist/class.umd.min.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.umd.min.js) |
 
 ### License
 
