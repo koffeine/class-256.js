@@ -1,6 +1,7 @@
 ## class-256.js
 
 class-256.js is a very small (256 bytes minified, or 398 bytes with [UMD](https://github.com/umdjs/umd) pattern) JavaScript classical inheritance pattern library.
+Originally based on [augment](https://github.com/javascript/augment) and [extend](https://github.com/jazdw/extend).
 
 ### API
 
