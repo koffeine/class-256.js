@@ -47,7 +47,7 @@
     "dot-location": [ 2, "property" ],
     "dot-notation": [ 2, { "allowKeywords": true } ],
     "eqeqeq": [ 2, "smart" ],
-    "guard-for-in": 2,
+    "guard-for-in": 0,
     "no-alert": 1,
     "no-caller": 2,
     "no-div-regex": 2,
@@ -65,7 +65,7 @@
     "no-labels": 2,
     "no-lone-blocks": 2,
     "no-loop-func": 2,
-    "no-magic-numbers": 2,
+    "no-magic-numbers": 0,
     "no-multi-spaces": [ 2, { exceptions: { "VariableDeclarator": true } } ],
     "no-multi-str": 2,
     "no-native-reassign": 2,
@@ -74,7 +74,7 @@
     "no-new": 2,
     "no-octal-escape": 2,
     "no-octal": 2,
-    "no-param-reassign": 2,
+    "no-param-reassign": 0,
     "no-process-env": 2,
     "no-proto": 2,
     "no-redeclare": 2,
@@ -100,7 +100,7 @@
 
     // Variables
 
-    "init-declarations": 2,
+    "init-declarations": 0,
     "no-catch-shadow": 2,
     "no-delete-var": 2,
     "no-label-var": 2,

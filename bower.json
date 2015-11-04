@@ -29,6 +29,8 @@
   "ignore": [
     ".git",
     ".gitignore",
+    "class-256.js.sublime-project",
+    "class-256.js.sublime-workspace",
     "node_modules"
   ]
 }
