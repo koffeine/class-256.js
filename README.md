@@ -5,8 +5,16 @@
 ![Bower version](https://img.shields.io/bower/v/class-256.js.svg)
 [![devDependency Status](https://david-dm.org/koffeine/class-256.js/dev-status.svg)](https://david-dm.org/koffeine/class-256.js#info=devDependencies)
 
-class-256.js is a 256 byte JavaScript classical inheritance pattern library (398 bytes with [UMD](https://github.com/umdjs/umd) pattern).  
+class-256.js is a 256 byte JavaScript classical inheritance pattern library (or 398 bytes with [UMD](https://github.com/umdjs/umd) pattern).  
 Originally based on [augment](https://github.com/javascript/augment) and [extend](https://github.com/jazdw/extend).
+
+### Features
+
+* OOP style declaration
+* Constructor methods (optional - if you don't provide one, the parent's constructor will be called upon instantiation)
+* Working instanceof
+* Private/privileged properties/methods
+* Parent properties/methods accessible through parent parameter
 
 ### Usage
 
@@ -17,19 +25,19 @@ var HelloWorld = Class.extend(function() {
 	var world = 'World!'; // private/privileged property
 
 	this.constructor = function() { // constructor method
-		privileged.call(this);
+		// do nothing
 	};
 
-	this.say = function(msg) { // public method
-		console.log(msg);
+	this.say = function() { // public method
+		return privileged.call(this);
 	};
 
 	function privileged() { // private/privileged method
-		this.say(this.hello + world);
+		return this.hello + world;
 	}
 });
 
-var HelloWorld2 = HelloWorld.extend(function(parent) {
+var HelloWorldTwo = HelloWorld.extend(function(parent) {
 	this.hello = 'Hi ';
 
 	this.constructor = function() {
@@ -37,8 +45,14 @@ var HelloWorld2 = HelloWorld.extend(function(parent) {
 	};
 });
 
-var h = new HelloWorld(); // 'Hello World!'
-var h2 = new HelloWorld2(); // 'Hi World!'
+var helloWorld = new HelloWorld()
+helloWorld.say() // 'Hello World!'
+helloWorld instanceof HelloWorld // true
+
+var helloWorldTwo = new HelloWorldTwo()
+helloWorldTwo.say() // 'Hi World!'
+helloWorldTwo instanceof HelloWorld2 // true
+helloWorldTwo instanceof HelloWorld // true
 ```
 
 ### Installation

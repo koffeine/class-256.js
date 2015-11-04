@@ -2,7 +2,9 @@
 // ECMAScript 6, JSX and Legacy rules not included
 {
   "globals": {
-    "require": true
+    "require": true,
+    "describe": true,
+    "it": true
   },
   "rules": {
     // Possible Errors

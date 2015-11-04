@@ -4,6 +4,7 @@ var gulp   = require('gulp'),
 	path   = require('path'),
 	del    = require('del'),
 	eslint = require('gulp-eslint'),
+	mocha  = require('gulp-mocha'),
 	umd    = require('gulp-umd'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename');
@@ -34,6 +35,11 @@ function modularize() {
 		.pipe(gulp.dest(dist));
 }
 
+function test() {
+	return gulp.src('test/test.js')
+		.pipe(mocha({ reporter: 'spec' }));
+}
+
 function minify() {
 	return gulp.src(path.join(dist, '*.js'))
 		.pipe(uglify())
@@ -42,4 +48,4 @@ function minify() {
 }
 
 gulp.task('clean', clean);
-gulp.task('build', gulp.series(lint, copy, modularize, minify));
+gulp.task('build', gulp.series(lint, copy, modularize, test, minify));
