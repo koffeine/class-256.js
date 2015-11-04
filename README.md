@@ -4,6 +4,7 @@
 [![npm version](https://img.shields.io/npm/v/class-256.js.svg)](https://www.npmjs.com/package/class-256.js)
 ![Bower version](https://img.shields.io/bower/v/class-256.js.svg)
 [![devDependency Status](https://david-dm.org/koffeine/class-256.js/dev-status.svg)](https://david-dm.org/koffeine/class-256.js#info=devDependencies)
+![Travis](https://img.shields.io/travis/koffeine/class-256.js.svg)
 
 class-256.js is a 256 byte JavaScript classical inheritance pattern library (or 398 bytes with [UMD](https://github.com/umdjs/umd) pattern).  
 Originally based on [augment](https://github.com/javascript/augment) and [extend](https://github.com/jazdw/extend).
