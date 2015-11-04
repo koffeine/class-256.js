@@ -84,6 +84,11 @@ Browser
 | ✓   |          | [dist/class.umd.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.umd.js)     |
 | ✓   | ✓        | [dist/class.umd.min.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.umd.min.js) |
 
+### Develop
+
+Running the following command will run [ESLint](http://eslint.org), create the [UMD](https://github.com/umdjs/umd) version, run the test and run uglify:  
+`gulp clean build`
+
 ### License
 
 Copyright © 2015 Horváth Kornél
