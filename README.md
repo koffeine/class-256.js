@@ -1,6 +1,5 @@
 ## class-256.js
 
-[![GitHub release](https://img.shields.io/github/release/koffeine%2Fclass-256.js.svg)](https://github.com/koffeine/class-256.js)
 [![npm version](https://img.shields.io/npm/v/class-256.js.svg)](https://www.npmjs.com/package/class-256.js)
 ![Bower version](https://img.shields.io/bower/v/class-256.js.svg)
 [![devDependency Status](https://david-dm.org/koffeine/class-256.js/dev-status.svg)](https://david-dm.org/koffeine/class-256.js#info=devDependencies)
