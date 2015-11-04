@@ -44,5 +44,8 @@
   ],
   "scripts": {
     "test": "gulp clean build"
+  },
+  "engines": {
+    "node": ">= 0.12"
   }
 }
