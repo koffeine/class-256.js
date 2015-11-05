@@ -9,6 +9,7 @@
 }(this, function() {
 'use strict';
 
+// changeable contants
 var C = 'constructor', // name of the constructor method
 	X = 'extend'; // name of extend method
 
@@ -23,7 +24,7 @@ Class[X] = function(subclass) {
 
 	var Extended = prototype.hasOwnProperty(C) ?
 		prototype[C] :
-		function() { return prototype[C].apply(this, arguments); };
+		function() { prototype[C].apply(this, arguments); };
 
 	Extended.prototype = prototype;
 	Extended[X] = self[X];

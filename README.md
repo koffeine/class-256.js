@@ -5,7 +5,7 @@
 [![devDependency Status](https://david-dm.org/koffeine/class-256.js/dev-status.svg)](https://david-dm.org/koffeine/class-256.js#info=devDependencies)
 ![Travis](https://img.shields.io/travis/koffeine/class-256.js.svg)
 
-class-256.js is a 256 byte JavaScript classical inheritance pattern library (or 390 bytes with [UMD](https://github.com/umdjs/umd) pattern).  
+class-256.js is a less than 256 byte JavaScript classical inheritance pattern library (249 bytes minified or 391 bytes minified with [UMD](https://github.com/umdjs/umd) pattern).  
 Originally based on [augment](https://github.com/javascript/augment) and [extend](https://github.com/jazdw/extend).
 
 ### Features
@@ -55,6 +55,8 @@ helloWorldTwo instanceof HelloWorldTwo // true
 helloWorldTwo instanceof HelloWorld // true
 ```
 
+For more examples see [test/test.js](https://github.com/koffeine/class-256.js/blob/master/test/test.js).
+
 ### Installation
 
 NPM
@@ -77,16 +79,17 @@ Browser
 
 ### Files
 
-| UMD | Minified | File                  |
-|:----|:---------|:----------------------|
-|     |          | [dist/class.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.js)         |
-|     | ✓        | [dist/class.min.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.min.js)     |
-| ✓   |          | [dist/class.umd.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.umd.js)     |
+| UMD | Minified | File                                                                                                |
+|:----|:---------|:----------------------------------------------------------------------------------------------------|
 | ✓   | ✓        | [dist/class.umd.min.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.umd.min.js) |
+|     | ✓        | [dist/class.min.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.min.js)         |
+| ✓   |          | [dist/class.umd.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.umd.js)         |
+|     |          | [dist/class.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.js)                 |
+
 
 ### Develop
 
-Running the following command will run [ESLint](http://eslint.org), create the [UMD](https://github.com/umdjs/umd) version, run the test and run uglify:  
+Running the following command will run [ESLint](http://eslint.org), create the [UMD](https://github.com/umdjs/umd) version, run tests and run uglify:  
 `gulp clean build`
 
 ### License
