@@ -1,6 +1,6 @@
 {
   "name": "class-256.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "256 byte JavaScript classical inheritance pattern library",
   "keywords": [
     "class",
@@ -36,6 +36,7 @@
     "dist",
     "src",
     ".eslintrc",
+    ".travis.yml",
     "bower.json",
     "gulpfile.js",
     "LICENSE",
