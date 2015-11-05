@@ -14,7 +14,7 @@ describe('test', function() {
 			var world = 'World!'; // private/privileged property
 
 			this.constructor = function() { // constructor method (default name can be changed via constant)
-				// do nothing
+				this.say(); // test
 			};
 
 			this.say = function() { // public method
@@ -29,8 +29,8 @@ describe('test', function() {
 		var HelloWorldTwo = HelloWorld.extend(function(parent) {
 			this.hello = 'Hi ';
 
-			this.constructor = function() {
-				parent.constructor.apply(this, arguments); // call parent contructor
+			this.say = function() {
+				return parent.say.call(this); // call parent method
 			};
 		});
 
