@@ -89,8 +89,11 @@ Browser
 
 ### Develop
 
-Running the following command will run [ESLint](http://eslint.org), create the [UMD](https://github.com/umdjs/umd) version, run tests and run uglify:  
-`gulp clean build`
+Running the following command will start [Gulp](http://gulpjs.com), which will run [ESLint](http://eslint.org), create the [UMD](https://github.com/umdjs/umd) version, run [Mocha](http://mochajs.org)/[Chai](http://chaijs.com) tests and run [UglifyJS](http://lisperator.net/uglifyjs):  
+
+```
+gulp clean build
+```
 
 ### License
 
