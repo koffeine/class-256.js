@@ -1,11 +1,6 @@
 // Rules for ESLint 1.8.0 (October 30, 2015)
 // ECMAScript 6, JSX and Legacy rules not included
 {
-  "globals": {
-    "require": true,
-    "describe": true,
-    "it": true
-  },
   "rules": {
     // Possible Errors
 

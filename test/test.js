@@ -1,3 +1,4 @@
+/* globals require, describe, it */
 'use strict';
 
 var chai  = require('chai'),
