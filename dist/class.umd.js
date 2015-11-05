@@ -9,17 +9,14 @@
 }(this, function() {
 'use strict';
 
-var
-	C = 'constructor', // name of the constructor method
+var C = 'constructor', // name of the constructor method
 	X = 'extend'; // name of extend method
 
 function Class() {}
 
 Class[X] = function(subclass) {
-	var
-		self          = this,
-		// selfPrototype = self.prototype,
-		prototype     = Object.create(self.prototype);
+	var self      = this,
+		prototype = Object.create(self.prototype);
 
 	subclass.call(prototype, self.prototype);
 
