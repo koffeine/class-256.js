@@ -1,17 +1,23 @@
+'use strict';
+
+var CRT = 'constructor'; // name of the constructor method
+
 function Class() {}
 
 Class.extend = function(subclass) {
-	var prototype = Object.create(this.prototype);
+	var self          = this,
+		selfPrototype = self.prototype,
+		prototype     = Object.create(selfPrototype);
 
-	subclass.call(prototype, this.prototype);
+	subclass.call(prototype, selfPrototype);
 
 
-	var Extended = prototype.hasOwnProperty('constructor') ?
-		prototype.constructor :
-		function() { return prototype.constructor.apply(this, arguments); };
+	var Extended = prototype.hasOwnProperty(CRT) ?
+		prototype[CRT] :
+		function() { return prototype[CRT].apply(self, arguments); };
 
 	Extended.prototype = prototype;
-	Extended.extend = this.extend;
+	Extended.extend = self.extend;
 
 	return Extended;
 };

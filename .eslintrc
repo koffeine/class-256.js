@@ -93,7 +93,7 @@
 
     // Strict Mode
 
-    "strict": [ 0 ],
+    "strict": [ 2, "global" ],
 
     // Variables
 

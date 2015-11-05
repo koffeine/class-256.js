@@ -13,7 +13,7 @@ describe('test', function() {
 
 			var world = 'World!'; // private/privileged property
 
-			this.constructor = function() { // constructor method
+			this.constructor = function() { // constructor method (default name can be changed via constant)
 				// do nothing
 			};
 
