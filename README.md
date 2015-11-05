@@ -51,7 +51,7 @@ helloWorld instanceof HelloWorld // true
 
 var helloWorldTwo = new HelloWorldTwo()
 helloWorldTwo.say() // 'Hi World!'
-helloWorldTwo instanceof HelloWorld2 // true
+helloWorldTwo instanceof HelloWorldTwo // true
 helloWorldTwo instanceof HelloWorld // true
 ```
 
