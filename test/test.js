@@ -80,6 +80,26 @@ describe('test', function() {
 		assert.isTrue(extended.tell());
 	});
 
+	it('should be able to .call()/.apply() public methods defined in parent class', function() {
+		var Base = Class.extend(function() {
+			this.value = true;
+
+			this.say = function(value) {
+				return value;
+			};
+		});
+
+		var Extended = Base.extend(function(parent) {
+			this.tell = function() {
+				return parent.say.call(this, this.value);
+			};
+		});
+
+		var extended = new Extended();
+
+		assert.isTrue(extended.tell());
+	});
+
 	it('should be able to see public methods/properties defined in descendant class', function() {
 		var Base = Class.extend(function() {
 			this.say = function() {
