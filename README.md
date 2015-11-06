@@ -61,13 +61,13 @@ For more examples see [test/test.js](https://github.com/koffeine/class-256.js/bl
 
 NPM
 
-```
+```sh
 npm install class-256.js
 ```
 
 Bower
 
-```
+```sh
 bower install class-256.js
 ```
 
@@ -89,9 +89,17 @@ Browser
 
 ### Develop
 
-Running the following command will start [Gulp](http://gulpjs.com), which will run [ESLint](http://eslint.org), create the [UMD](https://github.com/umdjs/umd) version, run [Mocha](http://mochajs.org)/[Chai](http://chaijs.com) tests and run [UglifyJS](http://lisperator.net/uglifyjs):
+#### Set up
 
+```sh
+npm install
 ```
+
+#### Build
+
+Running the following command will start [Gulp](http://gulpjs.com), which will run [ESLint](http://eslint.org), create the [UMD](https://github.com/umdjs/umd) version, run [Mocha](http://mochajs.org)/[Chai](http://chaijs.com) tests on node and on [PhantomJS](http://phantomjs.org) with [Karma](https://karma-runner.github.io) and run [UglifyJS](http://lisperator.net/uglifyjs):
+
+```sh
 gulp clean build
 ```
 
