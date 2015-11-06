@@ -1,8 +1,13 @@
 /* globals require, describe, it */
+/* eslint global-require: 0, block-scoped-var: 0 */
 'use strict';
 
-var chai  = require('chai'),
-	Class = require('../dist/class.umd');
+// Make Karma work
+if (typeof require == 'function') {
+	var chai  = require('chai'),
+		Class = require('../dist/class.umd');
+
+}
 
 var assert = chai.assert;
 

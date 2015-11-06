@@ -1,4 +1,4 @@
-/* globals require */
+/* globals require, __dirname */
 'use strict';
 
 var gulp   = require('gulp'),
@@ -6,11 +6,13 @@ var gulp   = require('gulp'),
 	del    = require('del'),
 	eslint = require('gulp-eslint'),
 	mocha  = require('gulp-mocha'),
+	karma  = require('karma'),
 	umd    = require('gulp-umd'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename');
 
 var src  = 'src/class.js',
+	test = 'test/test.js',
 	dist = 'dist';
 
 function clean() {
@@ -36,9 +38,17 @@ function modularize() {
 		.pipe(gulp.dest(dist));
 }
 
-function test() {
-	return gulp.src('test/test.js')
+function nodeTest() {
+	return gulp.src(test)
 		.pipe(mocha({ reporter: 'spec' }));
+}
+
+function browserTest(cb) {
+	new karma.Server({
+		configFile: path.join(__dirname, 'karma.conf.js'),
+		files: [ path.join(dist, 'class.umd.js'), test ],
+		singleRun: true
+	}, cb).start();
 }
 
 function minify() {
@@ -49,4 +59,4 @@ function minify() {
 }
 
 gulp.task('clean', clean);
-gulp.task('build', gulp.series(lint, copy, modularize, test, minify));
+gulp.task('build', gulp.series(lint, copy, modularize, nodeTest, browserTest, minify));
