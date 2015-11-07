@@ -58,5 +58,4 @@ function minify() {
 		.pipe(gulp.dest(dist));
 }
 
-gulp.task('clean', clean);
-gulp.task('build', gulp.series(lint, copy, modularize, nodeTest, browserTest, minify));
+gulp.task('default', gulp.series(clean, lint, copy, modularize, nodeTest, browserTest, minify));

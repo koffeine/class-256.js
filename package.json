@@ -53,7 +53,7 @@
     "README.md"
   ],
   "scripts": {
-    "test": "gulp clean build"
+    "test": "gulp"
   },
   "engines": {
     "node": ">= 0.12"
