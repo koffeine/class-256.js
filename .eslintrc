@@ -1,5 +1,6 @@
-// Rules for ESLint 1.8.0 (October 30, 2015)
+// Rules for ESLint 1.9.0 (November 6, 2015)
 // ECMAScript 6, JSX and Legacy rules not included
+// Rules: http://eslint.org/docs/rules
 {
   "rules": {
     // Possible Errors
@@ -47,6 +48,7 @@
     "guard-for-in": 0,
     "no-alert": 1,
     "no-caller": 2,
+    "no-case-declarations": 2,
     "no-div-regex": 2,
     "no-else-return": 2,
     "no-empty-label": 2,
