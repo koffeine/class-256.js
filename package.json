@@ -23,7 +23,7 @@
     "url": "https://github.com/koffeine/class-256.js/issues"
   },
   "devDependencies": {
-    "chai": "^3.4.0",
+    "chai": "^3.4.1",
     "del": "^2.0.2",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-eslint": "^1.0.0",
