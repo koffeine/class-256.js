@@ -13,19 +13,22 @@ Originally based on [augment](https://github.com/javascript/augment) and [extend
 * OOP style declaration
 * Constructor methods (optional - if you don't provide one, the parent's constructor will be called upon instantiation)
 * Working instanceof
-* Private/privileged properties/methods
-* Parent properties/methods accessible through parent parameter
+* Public and private/privileged properties/methods
+* Non-overridden public properties/methods defined in parent naturally accessible
+* Overridden public methods defined in parent accessible through parent parameter
 
-### Usage
+### Basic usage
 
 ```js
-var HelloWorld = Class.extend(function() {
-	this.hello = 'Hello '; // public property
+var HelloWorld = Class.extend(function() { // default name of .extend() can be changed via constant
+	this.greeting = 'Hello '; // public property
 
-	var world = 'World!'; // private/privileged property
+	var world = 'World!'; // private property
 
-	this.constructor = function() { // constructor method (default name can be changed via constant)
-		// do nothing
+	this.constructor = function(greeting) { // default name of .constructor() can be changed via constant
+		if (typeof greeting != 'undefined') {
+			this.greeting = greeting;
+		}
 	};
 
 	this.say = function() { // public method
@@ -33,26 +36,68 @@ var HelloWorld = Class.extend(function() {
 	};
 
 	function privileged() { // private/privileged method
-		return this.hello + world;
+		return this.greeting + world;
 	}
-});
-
-var HelloWorldTwo = HelloWorld.extend(function(parent) {
-	this.hello = 'Hi ';
-
-	this.constructor = function() {
-		parent.constructor.apply(this, arguments); // call parent contructor
-	};
 });
 
 var helloWorld = new HelloWorld()
 helloWorld.say() // 'Hello World!'
 helloWorld instanceof HelloWorld // true
 
-var helloWorldTwo = new HelloWorldTwo()
-helloWorldTwo.say() // 'Hi World!'
-helloWorldTwo instanceof HelloWorldTwo // true
-helloWorldTwo instanceof HelloWorld // true
+var hiWorld = new HelloWorld('Hi ')
+hiWorld.say() // 'Hi World!'
+hiWorld instanceof HelloWorld // true
+```
+
+### Extending
+
+```js
+function isNonEmptyString(value) {
+	return typeof value == 'string' && value.length > 0;
+}
+
+var Base = Class.extend(function() {
+	this.name = '';
+
+	this.constructor = function(name) {
+		this.name = name;
+	};
+
+	// check name
+	this.isValid = function() {
+		return isNonEmptyString(this.name);
+	};
+});
+
+
+var Extended = Base.extend(function(parent) {
+	this.address = '';
+
+	this.constructor = function(name, address) {
+		parent.constructor.call(this, name); // call parent constructor
+		// could be also written as: this.name = name;
+
+		this.address = address;
+	};
+
+	// check name and address
+	this.isValid = function() {
+		return parent.isValid.call(this) && isNonEmptyString(this.address);
+		// could be also written as: return isNonEmptyString(this.name) && isNonEmptyString(this.address);
+	};
+});
+
+var emptyExample = new Extended(null, null);
+emptyExample.isValid() // false
+
+var nameExample = new Extended('John', null);
+nameExample.isValid() // false
+
+var addressExample = new Extended(null, 'London');
+addressExample.isValid() // false
+
+var validExample = new Extended('John', 'London');
+validExample.isValid() // true
 ```
 
 For more examples see [test/test.js](https://github.com/koffeine/class-256.js/blob/master/test/test.js).
@@ -105,6 +150,6 @@ gulp
 
 ### License
 
-Copyright © 2015 Horváth Kornél
+Copyright © 2015-2016 Horváth Kornél
 
 Licensed under the [MIT License](https://github.com/koffeine/class-256.js/blob/master/LICENSE.md).

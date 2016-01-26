@@ -1,6 +1,6 @@
-// Rules for ESLint 1.9.0 (November 6, 2015)
-// ECMAScript 6, JSX and Legacy rules not included
+// Rules for ESLint 1.10.3 (December 1, 2015)
 // Rules: http://eslint.org/docs/rules
+// ECMAScript 6, JSX and Legacy rules excluded
 {
   "rules": {
     // Possible Errors
