@@ -1,4 +1,4 @@
-/* globals require, describe, it */
+/* eslint-env mocha */
 /* eslint newline-after-var: 0, block-scoped-var: 0, global-require: 0 */
 'use strict';
 
