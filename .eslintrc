@@ -1,4 +1,4 @@
-// Rules for ESLint 2.4.0 (March 11, 2016)
+// Rules for ESLint 2.5.3 (March 28, 2016)
 // Rules: http://eslint.org/docs/rules
 {
   "extends": "eslint:recommended",
@@ -54,6 +54,7 @@
     "no-unused-expressions": "error", // default: "off"
     "no-useless-call": "error", // default: "off"
     "no-useless-concat": "error", // default: "off"
+    "no-useless-escape": "error", // default: "off"
     "no-void": "error", // default: "off"
     "no-warning-comments": [ "warn", { "terms": [ "todo", "fixme", "xxx" ], "location": "start" } ], // default: [ "off", { "terms": [ "todo", "fixme", "xxx" ], "location": "start" } ]
     "no-with": "error", // default: "off"
