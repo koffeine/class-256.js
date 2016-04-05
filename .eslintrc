@@ -1,4 +1,4 @@
-// Rules for ESLint 2.6.0 (April 1, 2016)
+// Rules for ESLint 2.7.0 (April 4, 2016)
 // Rules: http://eslint.org/docs/rules
 {
   "extends": "eslint:recommended",
