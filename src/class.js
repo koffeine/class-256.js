@@ -11,11 +11,9 @@ Class[X] = function(subclass) {
 
 	subclass.call(prototype, this.prototype);
 
-
-	var Extended = prototype.hasOwnProperty(C) ?
-		prototype[C] :
-		function() { prototype[C].apply(this, arguments); };
-
+	function Extended() {
+		prototype[C].apply(this, arguments);
+	}
 	Extended.prototype = prototype;
 	Extended[X] = this[X];
 
