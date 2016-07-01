@@ -7,10 +7,9 @@ var C = 'constructor', // name of the constructor method
 function Class() {}
 
 Class[X] = function(subclass) {
-	var self      = this,
-		prototype = Object.create(self.prototype);
+	var prototype = Object.create(this.prototype);
 
-	subclass.call(prototype, self.prototype);
+	subclass.call(prototype, this.prototype);
 
 
 	var Extended = prototype.hasOwnProperty(C) ?
@@ -18,7 +17,7 @@ Class[X] = function(subclass) {
 		function() { prototype[C].apply(this, arguments); };
 
 	Extended.prototype = prototype;
-	Extended[X] = self[X];
+	Extended[X] = this[X];
 
 	return Extended;
 };
