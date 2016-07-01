@@ -6,10 +6,10 @@ var C = 'constructor', // name of the constructor method
 
 function Class() {}
 
-Class[X] = function(subclass) {
+Class[X] = function(subclassFactory) {
 	var prototype = Object.create(this.prototype);
 
-	subclass.call(prototype, this.prototype);
+	subclassFactory.call(prototype, this.prototype);
 
 	function Extended() {
 		prototype[C].apply(this, arguments);
