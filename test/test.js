@@ -147,6 +147,24 @@ describe('test', function() {
 		assert.equal(helloWorld.sayMore(), 'Hello World!');
 	});
 
+	it("provides a 'self' parameter to ease private method definition", function() {
+		var Base = Class.extend(function(parent, self) {
+			self.value = false;
+
+			self.do = function() {
+			    return privateMethod();
+			};
+
+			var privateMethod = function() {
+			    return !self.value;
+			};
+		});
+
+		var instance = new Base();
+
+		assert.isTrue(instance.do());
+	});
+
 	it('instanceOf should work', function() {
 		var Top    = Class.extend(function() {}),
 			Middle = Top.extend(function() {}),
