@@ -1,4 +1,4 @@
-// Rules for ESLint 2.11.1 (May 30, 2016)
+// Rules for ESLint 3.0.0 (July 1, 2016)
 // Rules: http://eslint.org/docs/rules
 {
   "extends": "eslint:recommended",
@@ -39,7 +39,6 @@
     "no-loop-func": "error", // default: "off"
     "no-multi-spaces": [ "error", { "exceptions": { "VariableDeclarator": true, "Property": true } } ], // default: "off"
     "no-multi-str": "error", // default: "off"
-    "no-native-reassign": "error", // default: "off"
     "no-new-func": "error", // default: "off"
     "no-new-wrappers": "error", // default: "off"
     "no-new": "error", // default: "off"
@@ -91,6 +90,7 @@
     "block-spacing": [ "error", "always" ], // default: "off"
     "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ], // default: [ "off", "1tbs" ]
     "camelcase": [ "error", { "properties": "always" } ], // default: "off"
+    "comma-dangle": [ "error", "never" ], // default: "off"
     "comma-spacing": [ "error", { "before": false, "after": true } ], // default: "off"
     "comma-style": [ "error", "last" ], // default: "off"
     "computed-property-spacing": [ "error", "never" ], // default: [ "off", "never" ]
