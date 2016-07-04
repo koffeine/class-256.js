@@ -1,6 +1,6 @@
 {
   "name": "class-256.js",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Less than 256 byte JavaScript classical inheritance pattern library",
   "keywords": [
     "class",
