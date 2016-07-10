@@ -13,7 +13,7 @@ Originally based on [augment](https://github.com/javascript/augment) and [extend
 * OOP style declaration
 * Constructor methods (optional - if you don't provide one, the parent's constructor will be called upon instantiation)
 * Working instanceof
-* Public and private/privileged properties/methods
+* Supports public and private/privileged methods, public and private static properties
 * Non-overridden public properties/methods defined in parent naturally accessible
 * Overridden public methods defined in parent accessible through parent parameter
 
@@ -23,7 +23,7 @@ Originally based on [augment](https://github.com/javascript/augment) and [extend
 var HelloWorld = Class.extend(function() { // default name of .extend() can be changed via constant
 	this.greeting = 'Hello '; // public property
 
-	var world = 'World!'; // private property
+	var world = 'World!'; // private static property
 
 	this.constructor = function(greeting) { // default name of .constructor() can be changed via constant
 		if (typeof greeting != 'undefined') {
@@ -40,13 +40,19 @@ var HelloWorld = Class.extend(function() { // default name of .extend() can be c
 	}
 });
 
-var helloWorld = new HelloWorld()
-helloWorld.say() // 'Hello World!'
-helloWorld instanceof HelloWorld // true
+var helloWorld = new HelloWorld();
 
-var hiWorld = new HelloWorld('Hi ')
-hiWorld.say() // 'Hi World!'
-hiWorld instanceof HelloWorld // true
+assert.equal(helloWorld.say(), 'Hello World!');
+assert.instanceOf(helloWorld, HelloWorld);
+
+var hiWorld = new HelloWorld('Hi ');
+
+assert.equal(hiWorld.say(), 'Hi World!');
+assert.instanceOf(hiWorld, HelloWorld);
+
+helloWorld.setWorld('Earth!');
+assert.equal(helloWorld.say(), 'Hello Earth!');
+assert.equal(hiWorld.say(), 'Hi Earth!'); // Because 'world' is a static property
 ```
 
 ### Extending
@@ -88,16 +94,20 @@ var Extended = Base.extend(function(parent) {
 });
 
 var emptyExample = new Extended(null, null);
-emptyExample.isValid() // false
+
+assert.isFalse(emptyExample.isValid());
 
 var nameExample = new Extended('John', null);
-nameExample.isValid() // false
+
+assert.isFalse(nameExample.isValid());
 
 var addressExample = new Extended(null, 'London');
-addressExample.isValid() // false
+
+assert.isFalse(addressExample.isValid());
 
 var validExample = new Extended('John', 'London');
-validExample.isValid() // true
+
+assert.isTrue(validExample.isValid());
 ```
 
 For more examples see [test/test.js](https://github.com/koffeine/class-256.js/blob/master/test/test.js).

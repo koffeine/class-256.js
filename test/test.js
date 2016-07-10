@@ -174,4 +174,101 @@ describe('test', function() {
 		assert.instanceOf(bottom, Class);
 		assert.instanceOf(bottom, Object);
 	});
+
+	it('Basic usage from README.md should work', function() {
+		var HelloWorld = Class.extend(function() { // default name of .extend() can be changed via constant
+			this.greeting = 'Hello '; // public property
+
+			var world = 'World!'; // private static property
+
+			this.constructor = function(greeting) { // default name of .constructor() can be changed via constant
+				if (typeof greeting != 'undefined') {
+					this.greeting = greeting;
+				}
+			};
+
+			this.say = function() { // public method
+				return privileged.call(this);
+			};
+
+			function privileged() { // private/privileged method
+				return this.greeting + world;
+			}
+
+			this.setWorld = function(newWorld) {
+				world = newWorld;
+			};
+
+			this.getWorld = function() {
+				return world;
+			};
+		});
+
+		var helloWorld = new HelloWorld();
+
+		assert.equal(helloWorld.say(), 'Hello World!');
+		assert.instanceOf(helloWorld, HelloWorld);
+
+		var hiWorld = new HelloWorld('Hi ');
+
+		assert.equal(hiWorld.say(), 'Hi World!');
+		assert.instanceOf(hiWorld, HelloWorld);
+
+		helloWorld.setWorld('Earth!');
+		assert.equal(helloWorld.say(), 'Hello Earth!');
+		assert.equal(hiWorld.say(), 'Hi Earth!'); // Because 'world' is a static property
+	});
+
+	it('Extending from README.md should work', function() {
+		function isNonEmptyString(value) {
+			return typeof value == 'string' && value.length > 0;
+		}
+
+		var Base = Class.extend(function() {
+			this.name = '';
+
+			this.constructor = function(name) {
+				this.name = name;
+			};
+
+			// check name
+			this.isValid = function() {
+				return isNonEmptyString(this.name);
+			};
+		});
+
+
+		var Extended = Base.extend(function(parent) {
+			this.address = '';
+
+			this.constructor = function(name, address) {
+				parent.constructor.call(this, name); // call parent constructor
+				// could be also written as: this.name = name;
+
+				this.address = address;
+			};
+
+			// check name and address
+			this.isValid = function() {
+				return parent.isValid.call(this) && isNonEmptyString(this.address);
+				// could be also written as: return isNonEmptyString(this.name) && isNonEmptyString(this.address);
+			};
+		});
+
+		var emptyExample = new Extended(null, null);
+
+		assert.isFalse(emptyExample.isValid());
+
+		var nameExample = new Extended('John', null);
+
+		assert.isFalse(nameExample.isValid());
+
+		var addressExample = new Extended(null, 'London');
+
+		assert.isFalse(addressExample.isValid());
+
+		var validExample = new Extended('John', 'London');
+
+		assert.isTrue(validExample.isValid());
+	});
 });
