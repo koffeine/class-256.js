@@ -47,8 +47,5 @@
   ],
   "scripts": {
     "test": "gulp"
-  },
-  "engines": {
-    "node": ">= 0.12"
   }
 }
