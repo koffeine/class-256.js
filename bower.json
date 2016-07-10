@@ -1,6 +1,5 @@
 {
   "name": "class-256.js",
-  "version": "1.0.11",
   "description": "Less than 256 byte JavaScript classical inheritance pattern library",
   "keywords": [
     "class",
@@ -32,5 +31,15 @@
     "class-256.js.sublime-project",
     "class-256.js.sublime-workspace",
     "node_modules"
-  ]
+  ],
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "del": "^2.2.1",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "gulp-umd": "^0.2.0"
+  }
 }
