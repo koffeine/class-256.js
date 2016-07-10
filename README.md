@@ -38,6 +38,14 @@ var HelloWorld = Class.extend(function() { // default name of .extend() can be c
 	function privileged() { // private/privileged method
 		return this.greeting + world;
 	}
+
+	this.setWorld = function(newWorld) {
+		world = newWorld;
+	};
+
+	this.getWorld = function() {
+		return world;
+	};
 });
 
 var helloWorld = new HelloWorld();
