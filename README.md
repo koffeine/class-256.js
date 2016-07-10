@@ -119,7 +119,7 @@ bower install class-256.js
 Browser
 
 ```html
-<script src="https://github.com/koffeine/class-256.js/blob/master/dist/class.umd.min.js" charset="utf-8"></script>
+<script src="https://github.com/koffeine/class-256.js/blob/master/dist/class.umd.min.js"></script>
 ```
 
 ### Files
@@ -156,4 +156,4 @@ gulp
 
 Copyright © 2015-2016 Horváth Kornél
 
-Licensed under the [MIT License](https://github.com/koffeine/class-256.js/blob/master/LICENSE.md).
+Licensed under the [MIT License](https://github.com/koffeine/class-256.js/blob/master/LICENSE).
