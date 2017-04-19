@@ -9,7 +9,7 @@ function Class() {}
 Class[X] = function(subclassFactory) {
 	var prototype = Object.create(this.prototype);
 
-	subclassFactory.call(prototype, this.prototype);
+	subclassFactory.call(prototype, this.prototype, prototype);
 
 	function Extended() {
 		prototype[C].apply(this, arguments);
