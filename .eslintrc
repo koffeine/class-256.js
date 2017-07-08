@@ -1,5 +1,5 @@
-// Rules for ESLint 3.0.1 (July 5, 2016)
-// Rules: http://eslint.org/docs/rules
+// Rules for ESLint 4.1.1 (June 25, 2017)
+// Rules: http://eslint.org/docs/rules, eslint/conf/eslint-recommended.js
 {
   "extends": "eslint:recommended",
   "env": {
@@ -10,23 +10,19 @@
 
     "no-console": "warn", // default: "error"
     "no-extra-parens": "error", // default: "off"
-    "no-unexpected-multiline": "error", // default: "off"
 
     // Best Practices
 
     "block-scoped-var": "error", // default: "off"
     "consistent-return": "error", // default: "off"
-    "curly": [ "error", "all" ], // default: [ "off", "all" ]
+    "curly": [ "error", "all" ], // default: "off"
     "default-case": "error", // default: "off"
     "dot-location": [ "error", "property" ], // default: "off"
-    "dot-notation": [ "error", { "allowKeywords": true } ], // default: [ "off", { "allowKeywords": true } ]
+    "dot-notation": [ "error", { "allowKeywords": true } ], // default: "off"
     "eqeqeq": [ "error", "smart" ], // default: "off"
     "no-alert": "warn", // default: "off"
     "no-caller": "error", // default: "off"
-    "no-case-declarations": "error", // default: "off"
     "no-div-regex": "error", // default: "off"
-    "no-else-return": "error", // default: "off"
-    "no-empty-pattern": "error", // default: "off"
     "no-eq-null": "error", // default: "off"
     "no-eval": "error", // default: "off"
     "no-extend-native": "error", // default: "off"
@@ -53,13 +49,12 @@
     "no-unused-expressions": "error", // default: "off"
     "no-useless-call": "error", // default: "off"
     "no-useless-concat": "error", // default: "off"
-    "no-useless-escape": "error", // default: "off"
     "no-void": "error", // default: "off"
-    "no-warning-comments": [ "warn", { "terms": [ "todo", "fixme", "xxx" ], "location": "start" } ], // default: [ "off", { "terms": [ "todo", "fixme", "xxx" ], "location": "start" } ]
+    "no-warning-comments": [ "warn", { "terms": [ "todo", "fixme", "xxx" ], "location": "start" } ], // default: "off"
     "no-with": "error", // default: "off"
     "radix": "error", // default: "off"
     "wrap-iife": [ "error", "outside" ], // default: "off"
-    "yoda": [ "error", "never" ], // default: [ "off", "never" ]
+    "yoda": [ "error", "never" ], // default: "off"
 
     // Strict Mode
 
@@ -79,27 +74,26 @@
 
     "global-require": "error", // default: "off"
     "handle-callback-err": "error", // default: "off"
-    "no-mixed-requires": "error", // default: [ "off", false ]
+    "no-mixed-requires": "error", // default: "off"
     "no-new-require": "error", // default: "off"
     "no-path-concat": "error", // default: "off"
     "no-process-exit": "error", // default: "off"
 
     // Stylistic Issues
 
-    "array-bracket-spacing": [ "error", "always" ], // default: [ "off", "never" ]
+    "array-bracket-spacing": [ "error", "always" ], // default: "off"
     "block-spacing": [ "error", "always" ], // default: "off"
-    "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ], // default: [ "off", "1tbs" ]
+    "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ], // default: "off"
     "camelcase": [ "error", { "properties": "always" } ], // default: "off"
-    "comma-dangle": [ "error", "never" ], // default: "off"
     "comma-spacing": [ "error", { "before": false, "after": true } ], // default: "off"
     "comma-style": [ "error", "last" ], // default: "off"
-    "computed-property-spacing": [ "error", "never" ], // default: [ "off", "never" ]
-    "consistent-this": [ "error", "self" ], // default: [ "off", "that" ]
+    "computed-property-spacing": [ "error", "never" ], // default: "off"
+    "consistent-this": [ "error", "self" ], // default: "off"
     "func-style": [ "error", "declaration" ], // default: "off"
     "id-match": [ "error", "^(\\$)?([_a-zA-Z]{1}[_a-zA-Z0-9]*)?$", { "properties": true } ], // default: "off"
-    "indent": [ "error", "tab", { "VariableDeclarator": 1, "SwitchCase": 1 } ], // default: "off"
+    "indent": [ "error", "tab", { "SwitchCase": 1, "MemberExpression": "off", "CallExpression": { "arguments": "off" }, "ArrayExpression": "off" } ], // default: "off"
     "key-spacing": [ "error", { "mode": "minimum" } ], // default: "off"
-    "linebreak-style": [ "error", "unix" ], // default: [ 0, "unix" ]
+    "linebreak-style": [ "error", "unix" ], // default: 0
     "lines-around-comment": [ "error", { "beforeBlockComment": true, "afterBlockComment": false, "beforeLineComment": false, "afterLineComment": false, "allowBlockStart": true, "allowBlockEnd": true, "allowObjectStart": true, "allowObjectEnd": true, "allowArrayStart": true, "allowArrayEnd": true }], // default: "off"
     "new-cap": [ "error", { "newIsCap": true, "capIsNew": true } ], // default: "off"
     "new-parens": "error", // default: "off"
@@ -114,19 +108,19 @@
     "no-spaced-func": "error", // default: "off"§
     "no-trailing-spaces": "error", // default: "off"
     "no-unneeded-ternary": "error", // default: "off"
-    "object-curly-spacing": [ "error", "always" ], // default: [ "off", "never" ]
-    "operator-assignment": [ "error", "always" ], // default: [ "off", "always" ]
+    "object-curly-spacing": [ "error", "always" ], // default: "off"
+    "operator-assignment": [ "error", "always" ], // default: "off"
     "operator-linebreak": [ "error", "after" ], // default: "off"
     "quote-props": [ "error", "as-needed" ], // default: "off"
-    "quotes": [ "error", "single" ], // default: [ "off", "double" ]
+    "quotes": [ "error", "single" ], // default: "off"
     "semi": [ "error", "always" ], // default: "off"
-    "semi-spacing": [ "error", { "before": false, "after": true } ], // default: [ "off", { "before": false, "after": true } ]
+    "semi-spacing": [ "error", { "before": false, "after": true } ], // default: "off"
     "keyword-spacing": "error", // default: "off"
-    "space-before-blocks": [ "error", "always" ], // default: [ "off", "always" ]
-    "space-before-function-paren": [ "error", "never" ], // default: [ "off", "always" ]
-    "space-in-parens": [ "error", "never" ], // default: [ "off", "never" ]
+    "space-before-blocks": [ "error", "always" ], // default: "off"
+    "space-before-function-paren": [ "error", "never" ], // default: "off"
+    "space-in-parens": [ "error", "never" ], // default: "off"
     "space-infix-ops": "error", // default: "off"
-    "space-unary-ops": [ "error", { "words": true, "nonwords": false } ], // default: [ "off", { "words": true, "nonwords": false } ]
+    "space-unary-ops": [ "error", { "words": true, "nonwords": false } ], // default: "off"
     "spaced-comment": [ "error", "always" ], // default: "off"
     "wrap-regex": "error" // default: "off"
   }

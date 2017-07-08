@@ -23,14 +23,14 @@
     "url": "https://github.com/koffeine/class-256.js/issues"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "del": "^2.2.2",
+    "chai": "^4.0.2",
+    "del": "^3.0.0",
     "gulp": "gulpjs/gulp#4.0",
-    "gulp-eslint": "^3.0.1",
-    "gulp-mocha": "^3.0.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-mocha": "^4.3.1",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.0.1",
-    "gulp-umd": "^0.2.0"
+    "gulp-uglify": "^3.0.0",
+    "gulp-umd": "^0.2.1"
   },
   "files": [
     "dist",
