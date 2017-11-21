@@ -11,16 +11,16 @@
     "super",
     "constructor"
   ],
-  "license": "MIT",
-  "main": "dist/class.umd.min.js",
   "homepage": "https://github.com/koffeine/class-256.js",
+  "bugs": {
+    "url": "https://github.com/koffeine/class-256.js/issues"
+  },
+  "license": "MIT",
+  "author": "Kornél Horváth <kornel.horvath@me.com>",
+  "main": "dist/class.umd.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/koffeine/class-256.js.git"
-  },
-  "author": "Horváth Kornél <koffeine@koffeine.com> (https://koffeine.com/)",
-  "bugs": {
-    "url": "https://github.com/koffeine/class-256.js/issues"
   },
   "devDependencies": {
     "chai": "^4.1.2",
@@ -32,19 +32,6 @@
     "gulp-uglify": "^3.0.0",
     "gulp-umd": "^0.2.1"
   },
-  "files": [
-    "dist",
-    "src",
-    "test",
-    ".editorconfig",
-    ".eslintrc",
-    ".travis.yml",
-    "bower.json",
-    "gulpfile.js",
-    "LICENSE",
-    "package.json",
-    "README.md"
-  ],
   "scripts": {
     "test": "gulp"
   }

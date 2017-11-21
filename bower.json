@@ -18,7 +18,7 @@
     "url": "git+https://github.com/koffeine/class-256.js.git"
   },
   "authors": [
-    "Horváth Kornél <koffeine@koffeine.com> (https://koffeine.com/)"
+    "Horváth Kornél <kornel.horvath@me.com>"
   ],
   "moduleType": [
     "amd",
