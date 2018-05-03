@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Use eslint-config-koffeine
 - Updated eslint to 4.19.1
 - Updated gulp-eslint to 4.0.2
-- Updated gulp-umd to 1.0.0
+- Updated gulp-umd to 2.0.0
 
 ### Fixed
 
