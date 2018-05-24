@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated gulp-eslint to 4.0.2
 - Updated gulp-umd to 2.0.0
 - Updated gulp-rename to 1.2.3
+- Updated gulp-mocha to 6.0.0
 
 ### Fixed
 
