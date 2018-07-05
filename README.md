@@ -154,7 +154,7 @@ Browser
 
 #### Requirements
 
-Building requires [NodeJS](https://nodejs.org) version 4.0.0 or later.
+Building requires [NodeJS](https://nodejs.org) version 6.0.0 or later.
 
 #### Set up
 
@@ -172,6 +172,6 @@ gulp
 
 ### License
 
-Copyright © 2015-2017 Horváth Kornél
+Copyright © 2015-2018 Horváth Kornél
 
 Licensed under the [MIT License](https://github.com/koffeine/class-256.js/blob/master/LICENSE).
