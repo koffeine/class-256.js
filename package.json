@@ -25,10 +25,10 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "del": "^3.0.0",
-    "eslint": "4.19.1",
-    "eslint-config-koffeine": "3.0.6",
+    "eslint": "5.0.1",
+    "eslint-config-koffeine": "4.0.0",
     "gulp": "^4.0.0",
-    "gulp-eslint": "^4.0.2",
+    "gulp-eslint": "^5.0.0",
     "gulp-mocha": "^6.0.0",
     "gulp-rename": "^1.3.0",
     "gulp-uglify": "^3.0.0",
