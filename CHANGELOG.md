@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Use eslint-config-koffeine
-- Updated eslint to 5.0.1
+- Updated eslint to 5.1.0
 - Updated gulp-eslint to 5.0.0
 - Updated gulp-umd to 2.0.0
 - Updated gulp-rename to 1.3.0
