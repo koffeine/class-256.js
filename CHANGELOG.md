@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated eslint to 5.2.0
 - Updated gulp-eslint to 5.0.0
 - Updated gulp-umd to 2.0.0
-- Updated gulp-rename to 1.3.0
+- Updated gulp-rename to 1.4.0
 - Updated gulp-mocha to 6.0.0
 - Tests now run on the following Node.js versions: 6.x, 8.x and stable
 
