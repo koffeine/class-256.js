@@ -22,6 +22,9 @@
     "type": "git",
     "url": "git+https://github.com/koffeine/class-256.js.git"
   },
+  "scripts": {
+    "test": "gulp"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "del": "^3.0.0",
@@ -33,8 +36,5 @@
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.1",
     "gulp-umd": "^2.0.0"
-  },
-  "scripts": {
-    "test": "gulp"
   }
 }

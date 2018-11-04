@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Tests now run on the following Node.js versions: 6.x, 8.x and stable
 - Updated .gitignore
 - Disabled package-lock.json
+- Reordered package.json properties
 
 ### Fixed
 
