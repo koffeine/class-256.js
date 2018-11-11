@@ -33,13 +33,15 @@
     "node_modules"
   ],
   "devDependencies": {
-    "chai": "^3.5.0",
-    "del": "^2.2.1",
-    "gulp": "gulpjs/gulp#4.0",
-    "gulp-eslint": "^3.0.1",
-    "gulp-mocha": "^2.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.5.4",
-    "gulp-umd": "^0.2.0"
+    "chai": "^4.2.0",
+    "del": "^3.0.0",
+    "eslint": "5.9.0",
+    "eslint-config-koffeine": "5.0.10",
+    "gulp": "^4.0.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-mocha": "^6.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-umd": "^2.0.0"
   }
 }
