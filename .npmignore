@@ -1,0 +1,8 @@
+src/
+test/
+.editorconfig
+.eslintrc.js
+.travis.yml
+bower.json
+*.sublime-*
+gulpfile.js

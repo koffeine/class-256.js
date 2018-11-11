@@ -26,11 +26,17 @@
     "node"
   ],
   "ignore": [
+    "src",
+    "test",
+    ".editorconfig",
+    ".eslintrc.js",
     ".git",
     ".gitignore",
-    "class-256.js.sublime-project",
-    "class-256.js.sublime-workspace",
-    "node_modules"
+    ".travis.yml",
+    "*.sublime-*",
+    "gulpfile.js",
+    "node_modules",
+    "package.json"
   ],
   "devDependencies": {
     "chai": "^4.2.0",

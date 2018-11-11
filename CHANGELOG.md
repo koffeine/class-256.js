@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 
 - Non-UMD versions from dist
+- Unnecessary files from published package
 
 
 ## [1.0.13] - 2017-10-10
