@@ -1,7 +1,10 @@
-/* eslint-env mocha */
+/* eslint-env node, mocha */
+/* eslint-disable no-empty-function, no-invalid-this, one-var */
+
 'use strict';
 
-var chai  = require('chai'),
+var
+	chai  = require('chai'),
 	Class = require('../dist/class.umd');
 
 var assert = chai.assert;
@@ -128,6 +131,10 @@ describe('test', function() {
 				this.world = 'World!';
 			};
 
+			function tell() {
+				return this.hello + this.world;
+			}
+
 			this.say = function() {
 				return tell.call(this);
 			};
@@ -135,10 +142,6 @@ describe('test', function() {
 			this.sayMore = function() {
 				return tell.apply(this, []);
 			};
-
-			function tell() {
-				return this.hello + this.world;
-			}
 		});
 
 		var helloWorld = new HelloWorld();
@@ -148,11 +151,13 @@ describe('test', function() {
 	});
 
 	it('instanceOf should work', function() {
-		var Top    = Class.extend(function() {}),
+		var
+			Top    = Class.extend(function() {}),
 			Middle = Top.extend(function() {}),
 			Bottom = Middle.extend(function() {});
 
-		var top    = new Top(),
+		var
+			top    = new Top(),
 			middle = new Middle(),
 			bottom = new Bottom();
 
@@ -187,13 +192,13 @@ describe('test', function() {
 				}
 			};
 
-			this.say = function() { // public method
-				return privileged.call(this);
-			};
-
 			function privileged() { // private/privileged method
 				return this.greeting + world;
 			}
+
+			this.say = function() { // public method
+				return privileged.call(this);
+			};
 
 			this.setWorld = function(newWorld) {
 				world = newWorld;

@@ -1,6 +1,8 @@
+/* eslint-env node */
 'use strict';
 
-var gulp   = require('gulp'),
+var
+	gulp   = require('gulp'),
 	path   = require('path'),
 	del    = require('del'),
 	eslint = require('gulp-eslint'),
@@ -9,7 +11,8 @@ var gulp   = require('gulp'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename');
 
-var src  = 'src/class.js',
+var
+	src  = 'src/class.js',
 	test = 'test/test.js',
 	dist = 'dist';
 

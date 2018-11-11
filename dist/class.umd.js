@@ -7,6 +7,7 @@
     root.Class = factory();
   }
 }(this, function() {
+/* eslint-disable no-empty-function */
 'use strict';
 
 // changeable contants

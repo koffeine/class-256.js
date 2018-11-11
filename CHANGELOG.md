@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Fixed badge link in README.md
 - License
+- Linting errors
 
 
 ## [1.0.13] - 2017-10-10
