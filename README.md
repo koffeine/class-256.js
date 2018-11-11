@@ -172,6 +172,6 @@ gulp
 
 ### License
 
-Copyright © 2015-2018 Horváth Kornél
+Copyright © 2015-2018 Kornél Horváth
 
-Licensed under the [MIT License](https://github.com/koffeine/class-256.js/blob/master/LICENSE).
+Licensed under the [MIT License](https://raw.githubusercontent.com/koffeine/class-256.js/master/LICENSE).
