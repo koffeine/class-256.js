@@ -27,11 +27,6 @@ function lint() {
 		.pipe(eslint.failOnError());
 }
 
-function copy() {
-	return gulp.src(src)
-		.pipe(gulp.dest(dist));
-}
-
 function modularize() {
 	return gulp.src(src)
 		.pipe(umd())
@@ -51,4 +46,4 @@ function minify() {
 		.pipe(gulp.dest(dist));
 }
 
-gulp.task('default', gulp.series(clean, lint, copy, modularize, unitTest, minify));
+gulp.task('default', gulp.series(clean, lint, modularize, unitTest, minify));

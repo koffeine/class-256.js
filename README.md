@@ -145,9 +145,7 @@ Browser
 | UMD | Minified | File                                                                                                |
 |:----|:---------|:----------------------------------------------------------------------------------------------------|
 | ✓   | ✓        | [dist/class.umd.min.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.umd.min.js) |
-|     | ✓        | [dist/class.min.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.min.js)         |
 | ✓   |          | [dist/class.umd.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.umd.js)         |
-|     |          | [dist/class.js](https://github.com/koffeine/class-256.js/blob/master/dist/class.js)                 |
 
 
 ### Develop
