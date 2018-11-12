@@ -5,6 +5,8 @@
 [![devDependency Status](https://david-dm.org/koffeine/class-256.js/dev-status.svg)](https://david-dm.org/koffeine/class-256.js?type=dev)
 [![Travis](https://img.shields.io/travis/koffeine/class-256.js.svg)](https://travis-ci.org/koffeine/class-256.js)
 
+__WARNING: Project is no longer maintained. You should use ES2015 (ES6) classes.__
+
 class-256.js is a less than 256 byte JavaScript classical inheritance pattern library (221 bytes minified or 363 bytes minified with [UMD](https://github.com/umdjs/umd) pattern).  
 Originally based on [augment](https://github.com/javascript/augment) and extend (repository no longer exists).
 
